@@ -13,13 +13,13 @@ def load():
         "AssetStudio"
     )
     set_runtime(
-        get_coreclr(
-            os.path.join(
-                lib_dir,
-                "runtimeconfig.json"
-            )
-        )
-    )
+         get_coreclr( runtime_config = 
+             os.path.join(
+                 lib_dir,
+                 "runtimeconfig.json"
+             )
+         )
+     )
     sys.path.insert(0, lib_dir)
 
     # needs to be imported after runtime is set and path is appended
